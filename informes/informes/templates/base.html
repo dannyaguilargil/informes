@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos de Grappelli -->
+    <link rel="stylesheet" type="text/css" href="{% static 'grappelli/stylesheets/screen.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'grappelli/stylesheets/login.css' %}">
+
+    <!-- Ícono -->
+    <link rel="icon" href="{% static 'imgs/escudito.ico' %}">
+
+    <title>{% block titulo %}{% endblock %}</title>
+
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Lato', sans-serif;
+        }
+        .login-box {
+            width: 400px;
+            margin: 80px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .login-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .login-logo img {
+            max-height: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box grappelli">
+        <div class="login-logo">
+            <img src="{% static 'imgs/escudito.ico' %}" alt="Logo">
+        </div>
+
+        {% block contenido %}
+        {% endblock contenido %}
+    </div>
+
+
+     <center style="color: black;">
+      Informes /  d4n7.dev - v0.1
+      
+    </center>
+</body>
+</html>
