@@ -10,8 +10,7 @@ def enviar_alarma(correo, mensaje):
         mensaje,
         settings.DEFAULT_FROM_EMAIL,
         [correo],
-        fail_silently=False,
-        
+        fail_silently=False,  
     )
 
 @shared_task
@@ -28,8 +27,6 @@ def enviar_alarma2(correo, mensaje_html, nombre_informe):
     email.send()
 
 
-
-
 @shared_task
 def prueba():
-    print('Celery esta funcionando dentro de informes!')
+    print('Celery esta funcionando!')
