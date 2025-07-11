@@ -39,7 +39,8 @@ Este sistema permite la **gestión automatizada de informes** que deben enviarse
 - **Frontend:** HTML5, Bootstrap, Django templates y una rama con REACT
 - **Base de datos:** PostgreSQL o SQLite
 - **Correo:** SMTP 
-- **Tareas programadas:** Celery + RabbitMQ 
+- **Tareas programadas:** Celery + Redis
 
 Desarrollado por Danny - d4n7.dev, 2025.
 Contacto: dev@dannyhub.com
+

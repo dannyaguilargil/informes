@@ -27,6 +27,6 @@ def enviar_alarma2(correo, mensaje_html, nombre_informe):
     email.send()
 
 
-@shared_task
+@shared_task(bind=True) 
 def prueba():
     print('Celery esta funcionando!')

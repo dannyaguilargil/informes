@@ -119,8 +119,9 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 ##Configuracion de Celery
 CELERY_RESULT_BACKEND = 'django-db'
+CELERY_RESULT_EXTENDED = True
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//' 
+CELERY_BROKER_URL = config('CELERY_BROKER_URL')
 CELERY_TIMEZONE = 'America/Lima'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'

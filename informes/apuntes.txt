@@ -1,0 +1,6 @@
+###Iniciar las tareas programadas
+celery -A informes worker -l info
+celery -A informes beat -l info
+
+#### flower / monitoreo
+celery -A informes flower
